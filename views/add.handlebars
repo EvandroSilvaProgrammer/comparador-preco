@@ -1,0 +1,33 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+        <h1>Adicionar Produto</h1>
+        {{#each errors}}
+        <div class="error">
+            <p>{{ty}}</p>
+        </div>
+        {{/each}}
+        <form action="/produto/add" method="POST">
+            <div class="input-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" name="title" id="title" class="input-box"
+                    placeholder="eg. Small Wordpress website, React developer" maxlength="100" value={{descri_produ}}>
+            </div>
+            <div class="input-group">
+                <label for="img"></label>
+                <input type="text" name="technologies" id="technologies" class="input-box"
+                    placeholder="eg. javascript, react, PHP" maxlength="100" value={{img}}>
+            </div>
+            <div class="input-group">
+                <label for="preco">Preço</label>
+                <input type="number" name="preco" id="budget" class="input-box" placeholder="ex.. 500, 5000, 10000"
+                    value={{preco}}>
+            </div>
+            <div class="input-group">
+                <label for="localizacao">Localização</label>
+                <textarea name="description" id="description" class="input-box"
+                    placeholder="Describe the details of the gig" rows="10">{{localizacao}}</textarea>
+            </div>
+            <input type="submit" value="Add Gig" class="btn btn-reverse">
+        </form>
+    </div>
+</section>

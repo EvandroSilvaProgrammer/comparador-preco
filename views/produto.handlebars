@@ -1,0 +1,19 @@
+<section id="gig" class="container">
+  <h1>Todos os produtos{{name}}</h1>
+
+  {{#each produto}}
+    <div class="gig">
+      <h3>{{produto.descricao}}</h3>
+      <p>{{img}}</p>
+      <ul>
+        <li>Preço: {{name}}</li>
+      </ul>
+      <div class="tech">
+        <small>Localização: <span>{{localizacao}}</span></small>
+      </div>
+    </div>
+  {{else}}
+    <p>No produt available</p>
+  {{/each}}
+
+</section>
